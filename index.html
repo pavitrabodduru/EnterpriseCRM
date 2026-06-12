@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise CRM System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>🌸 Enterprise CRM Dashboard</h1>
+        <p class="subtitle">
+            Manage leads and track sales performance efficiently
+        </p>
+
+        <!-- Dashboard Cards -->
+        <div class="dashboard">
+
+            <div class="card">
+                <h3>Total Leads</h3>
+                <p id="totalLeads">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Contacted Leads</h3>
+                <p id="contactedLeads">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Closed Deals</h3>
+                <p id="closedDeals">0</p>
+            </div>
+
+        </div>
+
+        <!-- Add Lead Section -->
+
+        <div class="form-section">
+
+            <h2>Add New Lead</h2>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter Name">
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter Email">
+
+            <input
+                type="text"
+                id="phone"
+                placeholder="Enter Phone Number">
+
+            <select id="status">
+                <option value="New">New</option>
+                <option value="Contacted">Contacted</option>
+                <option value="Proposal Sent">Proposal Sent</option>
+                <option value="Closed">Closed</option>
+            </select>
+
+            <button onclick="addLead()">
+                Add Lead
+            </button>
+
+        </div>
+
+        <!-- Search -->
+
+        <div class="search-section">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search Lead By Name"
+                onkeyup="searchLead()">
+
+        </div>
+
+        <!-- Lead List -->
+
+        <div class="table-section">
+
+            <h2>Lead List</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="leadTable">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
